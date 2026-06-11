@@ -230,9 +230,12 @@
 
 const numbers = [1, 2, 3, 4, 5,6];
 const squares=numbers.map(element => Math.pow(element,2));
+const evenNumbers = numbers.filter(element => element % 2 === 0);
+const oddNumbers = numbers.filter(element => element % 2 !== 0);
+
 console.log("Squares:", squares);
-
-
+console.log("Even Numbers:", evenNumbers);
+console.log("Odd Numbers:", oddNumbers);
 
 
 
