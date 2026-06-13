@@ -25,10 +25,10 @@ const fruits = [{ name: "apple", color: "red", calories: 95 },
 
 // console.log(lowCalFruits);
 
-//reduse
-const maxFruit=fruits.reduce((max,fruit)=>fruit.calories>max.calories? fruit:max);
+// //reduse
+// const maxFruit=fruits.reduce((max,fruit)=>fruit.calories>max.calories? fruit:max);
 
-console.log(maxFruit);
+// console.log(maxFruit);
 
 
 
