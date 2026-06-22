@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks in JavaScript</title>
+    
+</head>
+<body>
+<input type="text" id="pokemonName" placeholder="enter pokemon Name">
+<button onclick="fetchData()">fetch pokeman</button><br>
+
+<img src="" alt="pokeman sprite" id="pokemonSprite" style="display: none">
+
+    <script src="index.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Fetcher</title>
+</head>
+<body>
+    <input type="text" id="pokemonName" placeholder="Enter pokemon name (e.g. pikachu)">
+    <button onclick="fetchData()">Fetch Pokemon</button>
+    <br><br>
+    
+    <!-- This ID must EXACTLY match the JS -->
+    <img id="pokemanSprite" style="display:none;" alt="Pokemon Sprite">
+
+    <!-- Place script at the bottom so DOM loads first -->
+    <script src="index.js"></script>
+</body>
+</html>

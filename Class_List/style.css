@@ -1,0 +1,30 @@
+.myButtons {
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.enabled {
+    background-color: blue;
+    color: white;
+}
+
+/* Hover only applies when button has BOTH classes */
+.enabled.hover {
+    box-shadow: 0 0 10px hsla(240, 100%, 50%, 0.5);
+    font-weight: bold;
+}
+
+.disabled {
+    background-color: gainsboro;
+    color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#myH1 {
+    font-size: 5rem;
+}

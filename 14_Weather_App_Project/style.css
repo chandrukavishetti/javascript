@@ -1,0 +1,164 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Weather Form */
+.weatherForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cityInput {
+    flex: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cityInput:focus {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cityInput::placeholder {
+    color: #888;
+}
+
+.weatherForm button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.weatherForm button:hover {
+    background: #ee5a5a;
+    transform: translateY(-2px);
+}
+
+.weatherForm button:active {
+    transform: translateY(0);
+}
+
+/* Weather Card */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cityDisplay {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tempDisplay {
+    font-size: 64px;
+    font-weight: 300;
+    color: #333;
+    margin: 10px 0;
+}
+
+.tempDisplay::after {
+    content: "";
+}
+
+.humidityDisplay {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.descDisplay {
+    font-size: 20px;
+    color: #888;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.weatherEmoji {
+    font-size: 80px;
+    margin: 10px 0;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+/* Error Display */
+.errorDisplay {
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .weatherForm {
+        flex-direction: column;
+    }
+    
+    .weatherForm button {
+        width: 100%;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+    
+    .tempDisplay {
+        font-size: 48px;
+    }
+    
+    .weatherEmoji {
+        font-size: 60px;
+    }
+}
